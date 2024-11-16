@@ -3,24 +3,33 @@ import statistics
 
 class Tarea:
     #funcion de inicializacion = metodo constructor
-    def __init__(self, nombre, fechaRealizacion, tipoExperimento, resultados,):
+    def __init__(self, nombre, fechaRealizacion, tipoExperimento, resultados,detalle):
         self.nombre = nombre
         self.fechaRealizacion = fechaRealizacion
         self.tipoExperimento = tipoExperimento
         self.resultados = resultados
+        self.detalle = detalle
         
 
 #funcion para agregar una tarea
 
 def agregarTarea(listaTareas):
     nombre = input("Ingrese el nombre del Experimento: ")
+    detalle = input("Ingrese el detalle del Experimento: ")
     fechaRealizacion_str = input("ingrese la  fecha del Experimento (DD/MM/AAAA): ")
     try:
-        fechaLimite =datetime.strptime(fechaRealizacion_str, "%d/%m/%Y")
+        fechaRealizacion =datetime.strptime(fechaRealizacion_str,"%d/%m/%Y")
     except ValueError:
         print("fecha no valida.")
         return
-    tipoExperimento = input("Ingrese la tipo de experimento (Quimica , Biologica , Fisica): ")
+    #tipoExperimento = input("Ingrese la tipo de experimento (Quimica , Biologica , Fisica): ")
+    try:
+        tipoExperimento = ["Quimica", "Biologica", "Fisica"]
+        if not (0 <= int(input(f"Ingrese el numero correspondiente al tipo de experimento: \n 1. Quimica\n 2. Biologica\n 3. Fisica\n ")) - 1 < 3):
+            raise ValueError
+    except ValueError:
+        print("opcion no valida.")
+        return
     resultados_str = input("ingrese  los resultados de los experimentos separadas en comas: ")
 
     try:
@@ -29,12 +38,12 @@ def agregarTarea(listaTareas):
         print("Valores no validos.")
         return
     
-    #crear un objeto y lo agrega a la lista de taras
-    tarea =  Tarea (nombre, fechaLimite, tipoExperimento, resultados)
+    #crear un objeto y lo agrega a la lista de tareas
+    tarea =  Tarea (nombre, fechaRealizacion, tipoExperimento, resultados,detalle)
     listaTareas.append(tarea)
     print("Tarea agregada exitosamente.")
 
-def VusualizarTareas(listaTareas):
+def VisualizarTareas(listaTareas):
     if not listaTareas:
         print("no hay tareas resgistradas")
         return
@@ -42,8 +51,11 @@ def VusualizarTareas(listaTareas):
         print(f"\nTarea {i}")
         print(f"Nombre: {tarea.nombre}")
         print(f"Fecha: {tarea.fechaRealizacion.strftime('%d/%m/%Y')}")
+        print(f"Detalle: {tarea.detalle}")
         print(f"Categoria: {tarea.tipoExperimento}")
-        print(f"Horas dedicadas: {tarea.resultados}")
+        print(f"puntajes obtenidos: {tarea.resultados}")
+        print(f"puntaje maximo: {max(tarea.resultados)}")
+        print(f"puntaje minimo: {min(tarea.resultados)}")
 
 #funcion para analizar horas
 def analizarHoras(listaTareas):
@@ -56,7 +68,7 @@ def analizarHoras(listaTareas):
         minimo = min(tarea.resultados)
         print(f"\nAnalisis de {tarea.nombre}")
         print(f"Promedio Puntaje: {promedio}")
-        print(f"Puntaje MAximo: {maximo}")
+        print(f"Puntaje Maximo: {maximo}")
         print(f"Puntaje Minimo: {minimo}")
 
 
@@ -91,7 +103,7 @@ def menu():
         if opcion == "1":
             agregarTarea(listaTareas)
         elif opcion == "2":
-            VusualizarTareas(listaTareas)
+            VisualizarTareas(listaTareas)
         elif opcion == "3":
             analizarHoras(listaTareas)
         elif opcion == "4":

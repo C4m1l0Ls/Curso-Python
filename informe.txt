@@ -1,0 +1,25 @@
+
+Nombre: laser
+Fecha: 14/11/2024
+Categoría: Química
+Detalle: es un becerro 
+Puntajes obtenidos: [4.0, 6.0, 6.0]
+Promedio de Puntajes: 5.33
+Puntaje Máximo: 6.0
+Puntaje Mínimo: 4.0
+----------------------------------------
+
+Experimento con mejor puntaje:----------------------------------------
+El mejor puntaje es 7.0, obtenido en la tarea 'camilo' (Categoría: Física, Fecha: 14/12/2024).
+Nombre: camilo
+Fecha: 14/12/2024
+Categoría: Física
+Detalle: prueba del detalle
+Puntajes obtenidos: [7.0, 6.0, 5.0]
+Promedio de Puntajes: 6.00
+Puntaje Máximo: 7.0
+Puntaje Mínimo: 5.0
+----------------------------------------
+
+Experimento con mejor puntaje:----------------------------------------
+El mejor puntaje es 7.0, obtenido en la tarea 'camilo' (Categoría: Física, Fecha: 14/12/2024).

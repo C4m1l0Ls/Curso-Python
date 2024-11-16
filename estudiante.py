@@ -56,7 +56,7 @@ def asignarHorario():
         horarios.append(horario)
         print (f'horario: {dias} , asignado al curso {curso} a las {hora}')
     else:
-        print (f'opcion del curso no valida, recuerde que solo hya {len(cursos)} cursos')
+        print (f'opcion del curso no valida, recuerde que solo hay {len(cursos)} cursos')
 
 def mostrasEstudiantes():
     if estudiantes:
