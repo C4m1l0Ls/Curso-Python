@@ -1,21 +1,11 @@
 
-Nombre: prueba1
-Fecha: 11/11/2024
+Nombre: prueba3
+Fecha: 20/11/2025
 Categoría: Física
-Detalle: prueba5
-Puntajes obtenidos: [1.0, 1.0, 8.0]
-Promedio de Puntajes: 3.33
-Puntaje Máximo: 8.0
+Detalle: preuba della3
+Puntajes obtenidos: [1.0, 2.0, 3.0]
+Promedio de Puntajes: 2.00
+Puntaje Máximo: 3.0
 Puntaje Mínimo: 1.0
 ----------------------------------------
-
-Nombre: prueba2
-Fecha: 01/01/2025
-Categoría: Biológica
-Detalle: detalles de prueba2
-Puntajes obtenidos: [4.0, 6.0, 8.0]
-Promedio de Puntajes: 6.00
-Puntaje Máximo: 8.0
-Puntaje Mínimo: 4.0
-----------------------------------------
-El mejor puntaje es 8.0, obtenido en la tarea 'prueba2' (Categoría: Biológica, Fecha: 01/01/2025).
+El mejor puntaje es 3.0, obtenido en la tarea 'prueba3' (Categoría: Física, Fecha: 20/11/2025).

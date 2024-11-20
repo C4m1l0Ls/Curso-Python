@@ -51,7 +51,7 @@ def eliminarTarea(listaTareas):
         return
     visualizarTareas(listaTareas)
     try:
-        indice = int(input("\nIngrese el indice del experimento que desea eliminar: ")) - 1
+        indice = int(input("\nIngrese el numero del experimento que desea eliminar: ")) - 1
         if 0 <= indice < len(listaTareas):
             eliminado = listaTareas.pop(indice)
             print(f"El experimento '{eliminado.nombre}' ha sido eliminado.")
