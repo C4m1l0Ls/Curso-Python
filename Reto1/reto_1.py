@@ -10,7 +10,7 @@ class Tarea:
         self.resultados = resultados
         self.detalle = detalle
 
-# Funcion para agregar una tarea
+# Funcion para agregar un experimento
 def agregarTarea(listaTareas):
     nombre = input("Ingrese el nombre del Experimento: ")
     detalle = input("Ingrese el detalle del Experimento: ")
@@ -44,7 +44,7 @@ def agregarTarea(listaTareas):
     listaTareas.append(tarea)
     print("Experimento Agregado Exitosamente.")
 
-#funcion para eliminar una tarea
+#funcion para eliminar una experimento
 def eliminarTarea(listaTareas):
     if not listaTareas:
         print("No hay experimentos registrados para eliminar")
@@ -61,7 +61,7 @@ def eliminarTarea(listaTareas):
         print("Entrada no valida. por favor ingrese un Numero.")
         return
     
-#funcion para editar una tarea
+#funcion para editar un experimento
 def editarTarea(listaTareas):
     if not listaTareas:
         print("No hay experimentos registrados para editar")
