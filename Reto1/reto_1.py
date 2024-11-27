@@ -23,7 +23,7 @@ def agregarTarea(listaTareas):
     
     tipoExperimentos = ["Química", "Biológica", "Física"]
     try:
-        opcion_tipo = int(input("Seleccione el tipo de experimento:\n1. Química\n2. Biológica\n3. Física\n"))
+        opcion_tipo = int(input("Seleccione el  numero correspondiente al tipo de experimento:\n1. Química\n2. Biológica\n3. Física\n"))
         if not (1 <= opcion_tipo <= 3):
             raise ValueError
         tipoExperimento = tipoExperimentos[opcion_tipo - 1]
@@ -35,7 +35,7 @@ def agregarTarea(listaTareas):
     try:
         resultados = list(map(float, resultados_str.split(",")))
         if not resultados:
-            raise ValueError
+            raise ValueError ("No se ingresaron resultados.")
     except ValueError:
         print("Resultados no válidos. Deben ser números separados por comas.")
         return
@@ -151,25 +151,25 @@ def analizarPuntajes(listaTareas):
         print(f"Puntaje Mínimo: {minimo}")
 
 
-#funcion para obtener el mejor resultado en las tareas registradas
+#funcion para obtener el mejor resultado en los experimentos registrados
 def compararResultados(listaTareas):
     if not listaTareas:
         print("No hay tareas registradas.")
         return
     
     mejorPuntaje = float ('-inf')
-    tareaMP = None
+    experimentoMP = None
 
     for tarea in listaTareas:
         maxPT = max(tarea.resultados)
         if maxPT > mejorPuntaje:
             mejorPuntaje = maxPT
-            tareaMP = tarea
+            experimentoMP = tarea
     print("\nCompracion de resultados:")
 
-    if tareaMP:
-        print(f"El mejor puntaje es {mejorPuntaje}, obtenido del experimento '{tareaMP.nombre}' "
-              f"(Categoría: {tareaMP.tipoExperimento}, Fecha: {tareaMP.fechaRealizacion.strftime('%d/%m/%Y')}).")
+    if experimentoMP:
+        print(f"El mejor puntaje es {mejorPuntaje}, obtenido del experimento '{experimentoMP.nombre}' "
+              f"(Categoría: {experimentoMP.tipoExperimento}, Fecha: {experimentoMP.fechaRealizacion.strftime('%d/%m/%Y')}).")
         
 
 #funcion para generar el informe
