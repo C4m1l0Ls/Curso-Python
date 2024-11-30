@@ -1,7 +1,7 @@
-from datetime import datetime
-import statistics
+from datetime import datetime #comvertir fechas tipo str a datetime
+import statistics #calcular estadisticas
 
-# Clase para representar una tarea
+# Clase para representar una tarea, metodo constructor 
 class Tarea:
     def __init__(self, nombre, fechaRealizacion, tipoExperimento, resultados, detalle):
         self.nombre = nombre
@@ -35,7 +35,7 @@ def agregarTarea(listaTareas):
     try:
         resultados = list(map(float, resultados_str.split(",")))
         if not resultados:
-            raise ValueError ("No se ingresaron resultados.")
+            raise ValueError 
     except ValueError:
         print("Resultados no válidos. Deben ser números separados por comas.")
         return
