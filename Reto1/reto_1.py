@@ -4,7 +4,7 @@ import statistics #calcular estadisticas
 # Clase para representar una tarea, metodo constructor 
 class Tarea:
     def __init__(self, nombre, fechaRealizacion, tipoExperimento, resultados, detalle):
-        self.nombre = nombre
+        self.nombre = nombre #atributos
         self.fechaRealizacion = fechaRealizacion
         self.tipoExperimento = tipoExperimento
         self.resultados = resultados
@@ -124,7 +124,7 @@ def editarTarea(listaTareas):
 #funcion para visualizar las tareas
 def visualizarTareas(listaTareas):
     if not listaTareas:
-        print("No hay tareas registradas.")
+        print("No hay experimetos registrados.")
         return
     for i, tarea in enumerate(listaTareas, start=1):
         print(f"\nExperimento {i}")
@@ -139,7 +139,7 @@ def visualizarTareas(listaTareas):
 #funcion para analizar los puntajes
 def analizarPuntajes(listaTareas):
     if not listaTareas:
-        print("No hay tareas registradas.")
+        print("No hay Experoimetos registrados.")
         return
     for tarea in listaTareas:
         promedio = statistics.mean(tarea.resultados)
@@ -154,7 +154,7 @@ def analizarPuntajes(listaTareas):
 #funcion para obtener el mejor resultado en los experimentos registrados
 def compararResultados(listaTareas):
     if not listaTareas:
-        print("No hay tareas registradas.")
+        print("No hay Experimentos registrados.")
         return
     
     mejorPuntaje = float ('-inf')
